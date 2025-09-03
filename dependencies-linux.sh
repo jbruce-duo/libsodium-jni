@@ -4,6 +4,9 @@ set -ev
 
 . ./setenv.sh
 
+# needed for https usage with apt
+sudo apt-get install apt-transport-https
+
 sudo apt-get -qq update
 sudo apt-get -y -qq install lsb-release
 
@@ -44,7 +47,7 @@ test -e `pwd`/android-toolchain || ${NDK_ROOT}/build/tools/make_standalone_toolc
 popd
 
 pushd ./installs
-wget --quiet http://www-us.apache.org/dist/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz
+wget --quiet http://archive.apache.org/dist/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz
 tar -xf apache-maven-${MAVEN_VERSION}-bin.tar.gz
 popd
 
