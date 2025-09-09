@@ -1,4 +1,4 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="org.kaliumjni.lib"> 
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.github.joshjdevl.libsodiumjni"> 
     <application android:allowBackup="false" >
     </application>
 
